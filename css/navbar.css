@@ -1,0 +1,39 @@
+
+/** Nav Bar */
+nav:nth-of-type(1){
+    width: 100%;
+    background-color: #121411;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #001f3f;
+    filter: drop-shadow(0px 2px 1px lightsteelblue);
+    padding: var(--nav_bar_padding);
+}
+
+nav:nth-of-type(1) div:nth-child(1) {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #1B1B1B;
+}
+
+nav:nth-of-type(1) section:nth-of-type(1) {
+    text-align: left;
+    background-color: tan;
+    grid-column-start: 1;
+    align-self: center;
+}
+
+nav:nth-of-type(1) section:nth-of-type(2) {
+    grid-column-start: 2;
+    text-align: center;
+    align-self: center;
+}
+
+nav:nth-of-type(1) section:nth-of-type(3) {
+    grid-column-start: 3;
+    text-align: right;
+    align-self: center;
+}

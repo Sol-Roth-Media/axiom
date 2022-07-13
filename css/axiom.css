@@ -1,0 +1,349 @@
+/** Easy Pixel Based Designs
+    https://learnui.design/blog/ios-font-size-guidelines.html
+    Pixels now act as relative units, so no more ems and rems needed. See
+    https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio
+    **/
+
+:root {
+    /** Universal Variables **/
+    --padding: 5px;
+    --margin: 0px;
+    --reading_with: 1200px;
+    --width: 100%;
+    --height: 100%;
+    --line_height: 1.5;
+    --font_family: var(--font_sans_serif);
+    --font_size: 14px;
+    --font_style: normal;
+    --font_variant: normal;
+    --font_sans_serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /** Fonts **/
+    --font_monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+
+    --step_up: 1.1025;
+    --step_up_x_2: calc(var(--step_up) * var(--step_up));
+    --step_up_x_3: calc(var(--step_up_x_2) * var(--step_up));
+    --step_up_x_4: calc(var(--step_up_x_3) * var(--step_up));
+    --step_up_x_5: calc(var(--step_up_x_4) * var(--step_up));
+    --step_up_x_6: calc(var(--step_up_x_5) * var(--step_up));
+
+    /** Step Down - used to calculate cascading sizes. The x powers are provided for easier to understand code later
+     down the line and to avoid using the power css function since it is not supported everywhere.
+     */
+    --step_down: .8975;
+    --step_down_x_2: calc(var(--step_down) * var(--step_down));
+    --step_down_x_3: calc(var(--step_down_x_2) * var(--step_down));
+    --step_down_x_4: calc(var(--step_down_x_3) * var(--step_down));
+    --step_down_x_5: calc(var(--step_down_x_4) * var(--step_down));
+    --step_down_x_6: calc(var(--step_down_x_5) * var(--step_down));
+
+    --max_font_size: 38px;
+    --min_font_size: 12px;
+    --max_padding: 20px;
+    --max_margin: 20px;
+    --min_padding: 0px;
+    --min_margin: 0px;
+    --max_line_height: 3;
+    --min_line_height: 10px;
+    --max_font_weight: 900;
+    --min_font_weight: 100;
+
+    /** Content */
+    --content_link_text_decoration: none;
+    --content_media_padding: 0px;
+    --content_media_margin: 0px;
+    --content_media_caption_size: 10px;
+    --content_media_caption_font_style: normal;
+    --content_media_caption_font_weight: normal;
+    --content_strong_font_weight: normal;
+    --content_strong_font_style: normal;
+    --content_em_font_weight: normal;
+    --content_em_font_style: normal;
+
+    /** Containers */
+    --container_text_align: center;
+    --container_padding: var(--padding);
+    --container_margin: var(--margin);
+
+    /** Wrappers **/
+    --wrapper_text_align: var(--container_text_align);
+    --wrapper_padding: var(--padding);
+    --wrapper_margin: var(--margin);
+
+    /** Links */
+    --link_text_decoration: none;
+
+    /** Paragraphs */
+    --paragraph_padding: 0px;
+    --paragraph_margin: 0px;
+    --paragraph_line_height: 1.5;
+    --paragraph_text_align: left;
+
+    /** Action Elements (buttons)*/
+    --action_padding: 10px;
+    --action_margin: 10px;
+    --text_align: left;
+
+    /** Headers (Text) */
+    --header_padding_step_up: 10px;
+    --header_padding: 8px;
+    --header_padding_step_down: 7px;
+    --header_padding_step_down_x_2: 6px;
+    --header_padding_step_down_x_3: 5px;
+    --header_padding_step_down_x_4: 4px;
+    --header_padding_step_down_x_5: 3px;
+
+    --container_min: 400px;
+    --container_max: 960px;
+    --container_size: 100%;
+
+    --wrapper_min: var(--container_min);
+    --wrapper_max: 960px;
+    --wrapper_size: 100%;
+
+    --site_header_min: var(--container_min);
+    --site_header_size: var(--container_size);
+    --site_header_max: var(--container_max); /** yay return of 960 since it's representational **/
+
+
+    --header_margin_top: 8px;
+    --header_margin_right: auto;
+    --header_margin_bottom: 8px;
+    --header_margin_left: auto;
+
+    --header_margin_step_up: 10px;
+    --header_margin: 8px;
+    --header_margin_step_down: 7px;
+    --header_margin_step_down_x_2: 6px;
+    --header_margin_step_down_x_3: 5px;
+    --header_margin_step_down_x_4: 4px;
+    --header_margin_step_down_x_5: 3px;
+
+    --header_font_family: var(--font_sans_serif);
+    --header_font_size: 14px;
+    --header_font_style: normal;
+    --header_font_variant: normal;
+    --header_font_weight: 500;
+    --header_text_align: left;
+    --header_max_line_height: 2;
+    --header_min_line_height: 1;
+    --header_step_up: var(--step_up);
+    --header_step_down: var(--step_down);
+    --header_size_step_up: var(--header_step_up);
+    --header_size_step_down: var(--header_step_down);
+
+    --header_weight_step_up: var(--header_step_up);
+    --header_weight_step_down: var(--header_step_down);
+    --header_max_strong_font_size: calc(var(--max_font_size) * 2);
+    --header_max_font_size: var(--max_font_size);
+    --header_min_font_size: var(--min_font_size);
+    --header_max_padding: var(--max_padding);
+    --header_min_padding: var(--min_padding);
+    --header_max_margin: var(--max_margin);
+    --header_min_margin: var(--min_margin);
+
+
+    /** Text Standouts **/
+    --text_standout_font_size: 28px;
+    --text_standout_color: grey;
+    --text_standout_weight: 400;
+
+    /** Grids **/
+    --grid_column_gap: 5px;
+    --grid_row_gap: 5px;
+
+    /** Lists **/
+    --list_style: none;
+    --list_padding: 0px;
+    --list_margin: 0px;
+    --list_padding-inline-start: 0rem;
+}
+
+
+body {
+    width: var(--width);
+    min-width:var(--width);
+    height: var(--height);
+    min-height: var(--height);
+    margin: var(--margin);
+    padding: 0px;
+    align-items: center;
+    justify-items: center;
+    font-size: var(--font_size);
+    line-height: var(--line_height);
+    font-family: var(--font_sans_serif);
+}
+
+.wrapper{
+    text-align: var(--wrapper_text_align);
+    padding: var(--wrapper_padding);
+    margin: var(--wrapper_margin);
+}
+
+header{
+    margin-left: auto;
+    margin-right: auto;
+    width: clamp(var(--site_header_min),var(--site_header_size),var(--site_header_max));
+}
+
+/** Typography **/
+h1, h2, h3, h4, h5, h6, h7, h8, .h0{
+    font-family: var(--header_font_family);
+    text-align: var(--header_text_align);
+
+    /** BLRT - Bottom Left Right Top **/
+    margin: var(--header_margin);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h0, h2 strong, .h2 strong{
+    font-weight: var(--header_font_weight) + 200;
+    font-size: calc(var(--header_max_font_size) * var(--step_up_x_2));
+    /** margin: var(--header_margin);**/
+    padding: var(--header_padding_step_up) var(--header_padding) var(--header_padding_step_up) var(--header_padding_step_up);
+    margin: var(--header_margin);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h0 strong{
+
+}
+
+h1, .h1, h3 strong, .h3 strong {
+    font-weight: var(--header_font_weight);
+    font-size: var(--header_max_font_size);
+    margin: var(--header_margin);
+    padding: var(--header_padding);
+}
+
+.h0 strong{
+    font-size: calc(var(--header_max_strong_font_size) * var(--step_up_x_3));
+}
+
+h1 strong, .h1 strong{
+    font-size: calc(var(--header_max_strong_font_size) * var(--step_up_x_2));
+    margin: var(--header_margin);
+    padding: var(--header_padding);
+    padding-top: var(--header_padding_step_up);
+    padding-bottom: var(--header_padding_step_up);
+    margin-top: var(--header_margin_step_up);
+    margin-bottom: var(--header_margin_step_up);
+}
+
+
+
+.h0 small, h1 small, h2 small, h3 small, h4 small, h5 small, h6 small{
+    font-size: smaller;
+    font-weight: normal;
+    opacity: 0.75;
+}
+
+
+h2, .h2, .h4 strong, h4 strong{
+    font-weight: var(--header_font_weight);
+    font-size: calc(var(--header_max_font_size) * var(--step_down));
+    margin: var(--header_margin);
+    margin-top: var(--header_margin_step_down);
+    margin-bottom: var(--header_margin_step_down);
+    padding: var(--header_padding);
+    padding-top: var(--header_padding_step_down);
+    padding-bottom: var(--header_padding_step_down);
+}
+
+h3, .h3, h5 strong, .h5 strong{
+    font-weight: calc(var(--header_font_weight) - 100);
+    font-size: calc(var(--header_max_font_size) * var(--step_down_x_2));
+    margin: var(--header_margin);
+    margin-top: var(--header_margin_step_down_x_2);
+    margin-bottom: var(--header_margin_step_down_x_2);
+    padding: var(--header_padding);
+    padding-top: var(--header_padding_step_down_x_2);
+    padding-bottom: var(--header_padding_step_down_x_2);
+}
+
+h4, .h4, h6 strong, .h6 strong{
+    font-weight: calc(var(--header_font_weight) - 200);
+    font-size: calc(var(--header_max_font_size) * var(--step_down_x_3));
+    margin: var(--header_margin);
+    margin-top: var(--header_margin_step_down_x_3);
+    margin-bottom: var(--header_margin_step_down_x_3);
+    padding: var(--header_padding);
+    padding-top: var(--header_padding_step_down_x_3);
+    padding-bottom: var(--header_padding_step_down_x_3);
+}
+
+h5, .h5{
+    font-weight: calc(var(--header_font_weight) - 300);
+    font-size: calc(var(--header_max_font_size) * var(--step_down_x_4));
+    margin: var(--header_margin);
+    margin-top: var(--header_margin_step_down_x_4);
+    margin-bottom: var(--header_margin_step_down_x_4);
+    padding: var(--header_padding);
+    padding-top: var(--header_padding_step_down_x_4);
+    padding-bottom: var(--header_padding_step_down_x_4);
+}
+
+h6, .h6{
+    font-weight: calc(var(--header_font_weight) - 400);
+    font-size: calc(var(--header_max_font_size) * var(--step_down_x_5));
+    margin: var(--header_margin);
+    margin-top: var(--header_margin_step_down_x_5);
+    margin-bottom: var(--header_margin_step_down_x_5);
+    padding: var(--header_padding);
+    padding-top: var(--header_padding_step_down_x_5);
+    padding-bottom: var(--header_padding_step_down_x_5);
+}
+
+/** usually holds larger tagline or standout description text.**/
+header hgroup p{
+    font-size: var(--text_standout_font_size);
+    color: var(--text_standout_color);
+    font-weight: var(--text_standout_weight);
+    text-align: center;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+/**
+  Article Elements and styles
+ */
+article p{
+    width: clamp(45ch, 50%, 75ch);
+    /**
+    According to The Elements of Typographic Style - ensure width from 45 to 75 characters http://webtypography.net/2.1.2#:~:text=%E2%80%9CAnything%20from%2045%20to%2075,is%2040%20to%2050%20characters.%E2%80%9D
+    **/
+}
+
+span, .span {
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--padding);
+}
+
+
+article, .article {
+    text-align: left; }
+
+/**
+  Elements
+ */
+
+p {
+    font-size: .9rem;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 1.6rem;
+    text-align: var(--paragraph_text_align);
+    /** Elements of Typographic Style  the perfect Width  http://webtypography.net/2.1.2#:~:text=%E2%80%9CAnything%20from%2045%20to%2075,is%2040%20to%2050%20characters.%E2%80%9D */
+    /** width: clamp(45ch, 50%, 75ch); **/
+}
