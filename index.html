@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/grid.css"/>
     <link rel="stylesheet" href="./css/navbar.css"/>
     <link rel="stylesheet" href="./css/utility.css"/>
+    <link rel="stylesheet" href="./css/colors.css"/>
 
 </head>
 
@@ -75,9 +76,21 @@
         </ul>
     </nav>
 
-    <div>
-        <div></div>
+    <h2>Colors</h2>
 
+    <div class="grid-col-auto">
+        <div class="color-primary-box swatch">Primary</div>
+        <div>Color 2</div>
+        <div>Color 3</div>
+        <div>Color 4</div>
+    </div>
+
+    <h3>Semantec Colors</h3>
+    <div class="grid-col-auto">
+        <div class="color-success-box swatch">Success</div>
+        <div class="color-error-box swatch">Error</div>
+        <div class="color-warning-box swatch">Warning</div>
+        <div class="color-info-box swatch">Info / Debug </div>
     </div>
 
 
@@ -107,9 +120,9 @@
         </section>
     </div>
 
+    <div class="wrapper">
     <main>
         <!-- Main Content -->
-
         <article>
             <section>
                 <p>
@@ -411,8 +424,62 @@
     </table>
 </article>
 
-</main>
 
+ <article>
+    <p>Cascading Varible Driven Properies (each one inherits it's parents value, from generic to specific. Each leav, inherits the value via variables by default,
+      So if you set the general padding variable to something like 5px, all elements proportially inherit a matched version based on this value, each level can be
+        overwritten via variables for customizeability, but the only value needing to be set to theme a new site is the main leafs on this tree.
+    </p>
+     <ul>
+         <li>
+             <h4>Padding</h4>
+                <ul>
+                    <li>wrapper padding</li>
+                    <li>container padding
+                            <ul>
+                                <li>article padding</li>
+                                <li>section padding</li>
+                                <li>aside padding</li>
+                            </ul>
+                    </li>
+                    <li></li>
+                </ul>
+         </li>
+         <li>
+             <h4>Margin</h4>
+             <ul>
+                 <li>wrapper margin</li>
+                 <li>container margin
+                     <ul>
+                         <li>article margin</li>
+                         <li>section margin</li>
+                         <li>aside margin</li>
+                     </ul>
+                 </li>
+                 <li></li>
+             </ul>
+         </li>
+             <li>
+                 <h4>Text Align</h4>
+         <ul>
+             <li>wrapper text_align</li>
+             <li>container text_align
+                 <ul>
+                     <li>article text_align</li>
+                     <li>section text_align</li>
+                     <li>aside text_align</li>
+                 </ul>
+             </li>
+             <li></li>
+         </ul>
+     </ul>
+ </article>
+
+
+
+
+</main>
+    </div>
 
 
 
