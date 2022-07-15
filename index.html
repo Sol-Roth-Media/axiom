@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/colors.css"/>
     <link rel="stylesheet" href="./css/axiom.css"/>
     <link rel="stylesheet" href="./css/grid.css"/>
     <link rel="stylesheet" href="./css/navbar.css"/>
     <link rel="stylesheet" href="./css/utility.css"/>
-    <link rel="stylesheet" href="./css/colors.css"/>
+
 
 </head>
 
@@ -60,7 +61,7 @@
               <!-- CSS Only Logo-->
               <span style="font-size:42pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:italic;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">A</span><span style="font-size:32pt;font-family:'Roboto Mono',monospace;color:#434343;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">X</span><span style="font-size:32pt;font-family:'Roboto Mono',monospace;color:#666666;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">I</span><span style="font-size:32pt;font-family:'Roboto Mono',monospace;color:#999999;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">O</span><span style="font-size:32pt;font-family:'Roboto Mono',monospace;color:#b7b7b7;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">M</span><span style="font-size:12pt;font-family:Roboto,sans-serif;color:#b7b7b7;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">&nbsp;</span><span style="font-size:26pt;font-family:'Roboto Mono',monospace;color:#d9d9d9;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">[</span><span style="font-size:26pt;font-family:'Roboto Mono',monospace;color:#00be00;background-color:transparent;font-weight:500;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">01</span><span style="font-size:26pt;font-family:'Roboto Mono',monospace;color:#d9d9d9;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">]</span><span style="font-size:26pt;font-family:'Roboto Mono',monospace;color:#b7b7b7;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"><br></span><span style="font-size:12.499999999999998pt;font-family:Consolas,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">F &nbsp;R &nbsp;A &nbsp;M &nbsp;E &nbsp;W &nbsp;O &nbsp;R &nbsp;K</span>
 
-              <p>With simple rules to make both designing & coding consistent, beautiful, fast and ultra clean.</p>
+              <p>A UI system with simple rules for designing & coding in a consistent, beautiful, and blazingly modern way.</p>
 
             </span>
         </hgroup>
@@ -79,8 +80,14 @@
     <h2>Colors</h2>
 
     <div class="grid-col-auto">
-        <div class="color-primary-box swatch">Primary</div>
-        <div>Color 2</div>
+        <div class="color-primary-container-box">
+            BG: Primary Container<br /> <small>Text Color: On Primary Container</small>
+            <div class="color-primary-box">BG: Primary <br /><small>
+                Text Color: On Primary
+            </small></div>
+        </div>
+
+        <div class="color-on-primary-box">On Primary</div>
         <div>Color 3</div>
         <div>Color 4</div>
     </div>
@@ -136,8 +143,10 @@
                 </p>
             </section>
             <section>
-                <h2>Design and Framework Rules</h2>
+                <h2>Axiom 01 Core Truths<br /> <small>Rules to follow when desining and coding User Interfaces</small></h2>
                 <ul>
+                    <li>No rules are absolute (haha!) - Don't make stupid decisions or work arounds if you need to do something or need a one off or edge case just to not violate these rules, these should be treated as strict guideliens that should only be broken is there is a solid need. When in doubt, follow all of them to the T and you'll design much fster with a higher quailty and consistency rate (and way more enjoyable1).</li>
+
                     <li>Elements can contain like elements or any element father down the Axiom Element Heirarchy Tree,
                         but elements CAN NOT contain elements higher up ont he hierachy. For example containers can
                         contain other containers or wrappers, but wrappers can not have containers in them.
@@ -170,6 +179,11 @@
                     <ul>
                         All sites must contain at least one div. The grid is applied to the body element, so one div is required.
                     </ul>
+                </ul>
+
+                <h2>Axiom 01 Princials and Desgin Philosphy</h2>
+                <ul>
+                    <li></li>
                 </ul>
 
             </section>

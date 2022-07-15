@@ -13,7 +13,7 @@
     --height: 100%;
     --line_height: 1.5;
     --font_family: var(--font_sans_serif);
-    --font_size: 14px;
+    --font_size: 18px;
     --font_style: normal;
     --font_variant: normal;
     --font_sans_serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -49,6 +49,14 @@
     --max_font_weight: 900;
     --min_font_weight: 100;
 
+    /** Text Decoration */
+    --text_decoration_skip_ink: auto;
+    --text_decoration_thickness: from-font;
+    --text_underline_offset: 5px;
+
+    /** Links */
+    --text_decoration_style: underline;
+
     /** Content */
     --content_link_text_decoration: none;
     --content_media_padding: 0px;
@@ -79,6 +87,8 @@
     --paragraph_margin: 0px;
     --paragraph_line_height: 1.5;
     --paragraph_text_align: left;
+    --paragraph_font_size: var(--font_size);
+    --paragraph_line_height: var(--line_height);
 
     /** Action Elements (buttons)*/
     --action_padding: 10px;
@@ -336,11 +346,11 @@ article, .article {
  */
 
 p {
-    font-size: .9rem;
+    font-size: var(--paragraph_font_size);
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
-    line-height: 1.6rem;
+    line-height: var(--paragraph_line_height);
     text-align: var(--paragraph_text_align);
     /** Elements of Typographic Style  the perfect Width  http://webtypography.net/2.1.2#:~:text=%E2%80%9CAnything%20from%2045%20to%2075,is%2040%20to%2050%20characters.%E2%80%9D */
     /** width: clamp(45ch, 50%, 75ch); **/
@@ -359,4 +369,12 @@ p {
 .rectangle{
     width: 300px;
     height: 150px;
+}
+
+/** Links */
+a{
+  color: var(--color-primary);
+  text-decoration-skip-ink: var(--text_decoration_skip_ink);
+  text_decoration_thickness: var(--text_decoration_thickness);
+  text_decoration_style: var(--text_decoration_style);
 }
