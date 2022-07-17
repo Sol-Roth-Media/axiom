@@ -18,17 +18,41 @@
     --color-tertiary-container: #bcebee;
     --color-on-tertiary-container: #002022;
 
+    /** Semantec Colors Inspired by Adobe Spectrum **/
+    /** Negative **/
+    --color-negative: #ba1a1a;
+    --color-on-negative: #ffffff;
+    --color-negative-container: #ffdad6;
+    --color-on-negative-container: #410002;
 
-    --color-error: #ba1a1a;
-    --color-on-error: #ffffff;
-    --color-error-container: #ffdad6;
-    --color-on-error-container: #410002;
+    /** Positive **/
+    --color-positive: #1ABA1DFF;
+    --color-on-positive: #ffffff;
+    --color-positive-container: #E6FFD6FF;
+    --color-on-positive-container: #004109;
+
+    /** Informative **/
+    --color-informative: #1a27ba;
+    --color-on-informative: #ffffff;
+    --color-informative-container: #d6e0ff;
+    --color-on-informative-container: #000b41;
+
+    /** Notice **/
+    --color-notice: #f67c2a;
+    --color-on-notice: #ffffff;
+    --color-notice-container: #ffebd6;
+    --color-on-notice-container: #412700;
+
 
     --color-outline: #73796e;
+
     --color-background: #fefbff;
+    --color-backround-dark: #1b1b1f;
     --color-on-background-: #1b1b1f;
+
     --color-surface: #fefbff;
     --color-on-surface: #1b1b1f;
+
     --color-surface-variant: #e1e2ec;
     --color-on-surface-variant: #44474f;
     --color-inverse-surface: #303033;
@@ -54,16 +78,19 @@
     --color-error: #ffb4ab;
     --color-on-error: #690005;
     --color-error-container: #93000a;
-    --color-on-error-container-dark: #ffb4ab;
+    --color-on-error-containerk: #ffb4ab;
 
     --color-outline: #8d9387;
+
     --color-background: #1a1c18;
     --color-on-background: #e3e2e6;
-    --color-surface: #1a1c18;
 
+    --color-surface: #1a1c18;
     --color-on-surface: #e2e3dc;
+
     --color-surface-variant: #44474f;
     --color-on-surface-variant: #c4c6d0;
+
     --color-inverse-surface: #e3e2e6;
     --color-inverse-on-surface: #303033;
 
@@ -134,6 +161,42 @@
     /* icons */
     --color-icon-primary: var(--gray-4);
     --color-icon-secondary: inherit;
+
+
+    /** Default Colors (no theme */
+    /** Primary  */
+    --color-primary: #016e00;
+    --color-on-primary: #ffffff;
+    --color-primary-container: #77ff61;
+    --color-on-primary-container: #002200;
+
+    /** Secondary */
+    --color-secondary: #54634d;
+    --color-on-secondary: #ffffff;
+    --color-secondary-container: #d7e8cd;
+    --color-on-secondary-container: #121f0e;
+
+    /** Tertiary */
+    --color-tertiary: #386568;
+    --color-on-tertiary: #ffffff;
+    --color-tertiary-container: #bcebee;
+    --color-on-tertiary-container: #002022;
+
+
+    --color-error: #ba1a1a;
+    --color-on-error: #ffffff;
+    --color-error-container: #ffdad6;
+    --color-on-error-container: #410002;
+
+    --color-outline: #73796e;
+    --color-background: #fefbff;
+    --color-on-background-: #1b1b1f;
+    --color-surface: #fefbff;
+    --color-on-surface: #1b1b1f;
+    --color-surface-variant: #e1e2ec;
+    --color-on-surface-variant: #44474f;
+    --color-inverse-surface: #303033;
+    --color-inverse-on-surface: #f2f0f4;
 }
 
 
@@ -175,27 +238,207 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
 }
 
 
---color-on-primary: #ffffff;
---color-primary-container: #77ff61;
---color-on-primary-container: #002200;
+.color-secondary-box{
+    background-color: var(--color-secondary);
+    color: var(--color-on-secondary);
+    padding: var(--padding);
+    margin: var(--margin);
+}
 
-/** Secondary */
---color-secondary: #54634d;
---color-on-secondary: #ffffff;
---color-secondary-container: #d7e8cd;
---color-on-secondary-container: #121f0e;
+.color-on-secondary-box{
+    background-color: var(--color-on-secondary);
+    color: var(--color-secondary);
+    padding: var(--padding);
+    margin: var(--margin);
+}
 
-/** Tertiary */
---color-tertiary: #386568;
---color-on-tertiary: #ffffff;
---color-tertiary-container: #bcebee;
---color-on-tertiary-container: #002022;
+.color-secondary-container-box{
+    background-color: var(--color-secondary-container);
+    padding: var(--padding);
+    margin: var(--margin);
+    color: var(--color-on-secondary-container);
+}
+
+.color-on-secondary-container-box{
+    background-color: var(--color-on-secondary-container);
+    color: var(--color-secondary-container);
+}
+
+/** Tertiary Color Box */
+.color-tertiary-box{
+    background-color: var(--color-tertiary);
+    color: var(--color-on-tertiary);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.color-on-tertiary-box{
+    background-color: var(--color-on-tertiary);
+    color: var(--color-tertiary);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.color-tertiary-container-box{
+    background-color: var(--color-tertiary-container);
+    padding: var(--padding);
+    margin: var(--margin);
+    color: var(--color-on-tertiary-container);
+}
+
+.color-on-tertiary-container-box{
+    background-color: var(--color-on-tertiary-container);
+    color: var(--color-tertiary-container);
+}
+
+/** Negative Color Box **/
+.color-negative-box{
+    background-color: var(--color-negative);
+    color: var(--color-on-negative);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.color-on-negative-box{
+    background-color: var(--color-on-negative);
+    color: var(--color-negative);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.color-negative-container-box{
+    background-color: var(--color-negative-container);
+    padding: var(--padding);
+    margin: var(--margin);
+    color: var(--color-on-negative-container);
+}
+
+.color-on-negative-container-box{
+    background-color: var(--color-on-negative-container);
+    color: var(--color-negative-container);
+}
 
 
---color-error: #ba1a1a;
---color-on-error: #ffffff;
---color-error-container: #ffdad6;
---color-on-error-container: #410002;
+
+/** Positive Color Box **/
+.color-positive-box{
+    background-color: var(--color-positive);
+    color: var(--color-on-positive);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.color-on-positive-box{
+    background-color: var(--color-on-positive);
+    color: var(--color-positive);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.color-positive-container-box{
+    background-color: var(--color-positive-container);
+    padding: var(--padding);
+    margin: var(--margin);
+    color: var(--color-on-positive-container);
+}
+
+.color-on-positive-container-box{
+    background-color: var(--color-on-positive-container);
+    color: var(--color-positive-container);
+}
+
+
+/** Informative Color Box **/
+.color-informative-box{
+    background-color: var(--color-informative);
+    color: var(--color-on-informative);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.color-on-informative-box{
+    background-color: var(--color-on-informative);
+    color: var(--color-informative);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.color-informative-container-box{
+    background-color: var(--color-informative-container);
+    padding: var(--padding);
+    margin: var(--margin);
+    color: var(--color-on-informative-container);
+}
+
+.color-on-informative-container-box{
+    background-color: var(--color-on-informative-container);
+    color: var(--color-informative-container);
+}
+
+
+/** Notice Color Box **/
+.color-notice-box{
+    background-color: var(--color-notice);
+    color: var(--color-on-notice);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.color-on-notice-box{
+    background-color: var(--color-on-notice);
+    color: var(--color-notice);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.color-notice-container-box{
+    background-color: var(--color-notice-container);
+    padding: var(--padding);
+    margin: var(--margin);
+    color: var(--color-on-notice-container);
+}
+
+.color-on-notice-container-box{
+    background-color: var(--color-on-notice-container);
+    color: var(--color-notice-container);
+}
+
+
+/** Surface Monochrome Colors*/
+.color-surface-box{
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.color-on-surface-box{
+    background-color: var(--color-on-surface);
+    color: var(--color-surface);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.color-surface-container-box{
+    background-color: var(--color-surface-container);
+    padding: var(--padding);
+    margin: var(--margin);
+    color: var(--color-on-surface-container);
+}
+
+.color-on-surface-container-box{
+    background-color: var(--color-on-surface-container);
+    color: var(--color-surface-container);
+}
+
+
+.content-main-wrapper{
+    background-image: linear-gradient(to right bottom, #e0ff9b, #c9ffc1, #c2ffe1, #cefff7, #e7ffff, #ebfeff, #effcff, #f3fbff, #dffbff, #c7fcff, #adfdff, #92feff);
+}
+
+
+/** Monochrome */
+
 
 --color-outline: #73796e;
 --color-background: #fefbff;
@@ -206,22 +449,3 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
 --color-on-surface-variant: #44474f;
 --color-inverse-surface: #303033;
 --color-inverse-on-surface: #f2f0f4;
-
-
-
-
-.color-success-box{
-    background-color: var(--color-success)
-}
-
-.color-error-box{
-    background-color: var(--color-error)
-}
-
-.color-warning-box{
-    background-color: var(--color-warning);
-}
-
-.color-info-box{
-    background-color: var(--color-info);
-}

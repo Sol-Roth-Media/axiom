@@ -1,0 +1,41 @@
+:root {
+
+}
+
+/**
+Monochrome Reference
+https://superuser.com/questions/361297/what-colour-is-the-dark-green-on-old-fashioned-green-screen-computer-displays
+ */
+
+.logo{
+    --logo_line_height: 1.5;
+    --logo_font_family: var(--font_sans_serif);
+    --logo_font_size: 16px;
+    --logo_font_style: normal;
+    --logo_font_variant: normal;
+}
+
+.logo small{
+    font-size: 28px;
+    font-family: roboto, arial, helvetica;
+    color: #B7B7B7;
+}
+
+.logo small em{
+    font-weight: 800;
+    color: white;
+}
+
+.logo small span{
+    font-size: 24px;
+    font-weight: normal;
+    color: white;
+}
+
+.logo small span span{
+    color: var(--color-primary-container);
+    color: #41FF00;
+    Font-family: Consolas, monaco, monospace;
+    font-size: 20px;
+    filter: contrast(1);
+}

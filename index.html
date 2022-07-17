@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="./css/grid.css"/>
     <link rel="stylesheet" href="./css/navbar.css"/>
     <link rel="stylesheet" href="./css/utility.css"/>
-
-
+    <link rel="stylesheet" href="./css/logo.css"/>
 </head>
 
 <body class="axiom01">
@@ -19,40 +18,55 @@
     <div>
         <section>
             <!-- <a href=""><img src="https://via.placeholder.com/120x80.png?text=Sol+Roth+Media" alt="Sol Roth Logo" /></a> -->
-            <strong>Axiom</strong>
+            <span class="logo">
+                <small>
+                <!-- CSS Logo-->
+                  <em><!-- Unicode A Square-->&#127280;</em> xiom<span>[<span>01</span>]</span>
+                <!-- End CSS Logo -->
+                </small>
+            </span>
         </section>
 
         <section>
-            <a href="http://photos.google.com">Photos</a>
+            <a href="">About</a>
+            <a href="">Docs</a>
         </section>
 
         <section>
-            <a href="http://solroth.com">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-app-indicator" viewBox="0 0 16 16">
-                    <path d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1H5.5z"/>
-                    <path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                </svg>
+            <a href="#mainmenu"
+               class="menu-toggle"
+               aria-label="Open main menu">
+                <span class="sr-only">Open main menu</span>
+                <i aria-hidden="true">&#9776;</i>
             </a>
-
-            <a href="http://solroth.com">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-app-indicator" viewBox="0 0 16 16">
-                    <path d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1H5.5z"/>
-                    <path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                </svg>
-            </a>
-
-            <a href="http://solroth.com">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-app-indicator" viewBox="0 0 16 16">
-                    <path d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1H5.5z"/>
-                    <path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                </svg>
-            </a>
-            <a href="">More</a>
         </section>
     </div>
 </nav>
 
-<div class="wrapper">
+<nav id="mainmenu" class="navbar-menu">
+
+    <div>
+        <section></section>
+        <section></section>
+        <section>
+            <a href=""
+               id="mainmenu-toggle"
+               class="menu-toggle"
+               aria-label="Close main menu">close &#10006;</a>
+        </section>
+    </div>
+
+
+    <ul>
+        <li><a href="">Introduction</a></li>
+        <li><a href="">Introduction</a></li>
+        <li><a href="">Design and Framework Rules</a></li>
+        <li><a href="">Hiearchy and Element Specific Rules</a></li>
+        <li><a href="">Examples and Templates</a></li>
+    </ul>
+</nav>
+
+<div class="wrapper content-main-wrapper">
     <!-- Main divider -->
     <header>
         <hgroup>
@@ -61,45 +75,106 @@
               <!-- CSS Only Logo-->
               <span style="font-size:42pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:italic;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">A</span><span style="font-size:32pt;font-family:'Roboto Mono',monospace;color:#434343;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">X</span><span style="font-size:32pt;font-family:'Roboto Mono',monospace;color:#666666;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">I</span><span style="font-size:32pt;font-family:'Roboto Mono',monospace;color:#999999;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">O</span><span style="font-size:32pt;font-family:'Roboto Mono',monospace;color:#b7b7b7;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">M</span><span style="font-size:12pt;font-family:Roboto,sans-serif;color:#b7b7b7;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">&nbsp;</span><span style="font-size:26pt;font-family:'Roboto Mono',monospace;color:#d9d9d9;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">[</span><span style="font-size:26pt;font-family:'Roboto Mono',monospace;color:#00be00;background-color:transparent;font-weight:500;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">01</span><span style="font-size:26pt;font-family:'Roboto Mono',monospace;color:#d9d9d9;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">]</span><span style="font-size:26pt;font-family:'Roboto Mono',monospace;color:#b7b7b7;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"><br></span><span style="font-size:12.499999999999998pt;font-family:Consolas,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">F &nbsp;R &nbsp;A &nbsp;M &nbsp;E &nbsp;W &nbsp;O &nbsp;R &nbsp;K</span>
 
-              <p>A UI system with simple rules for designing & coding in a consistent, beautiful, and blazingly modern way.</p>
-
+              <p>A UI system with simple rules for designing beautiful, consistent and &#x1F525; blazingly modern <em>HTML/CSS/JS</em> apps.</p>
             </span>
         </hgroup>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="">Introduction</a></li>
-            <li><a href="">Introduction</a></li>
-            <li><a href="">Design and Framework Rules</a></li>
-            <li><a href="">Hiearchy and Element Specific Rules</a></li>
-            <li><a href="">Examples and Templates</a></li>
-        </ul>
-    </nav>
 
-    <h2>Colors</h2>
+
+
+    <h2>Main Colors</h2>
 
     <div class="grid-col-auto">
         <div class="color-primary-container-box">
-            BG: Primary Container<br /> <small>Text Color: On Primary Container</small>
+            BG: Primary Container <br /> <small>Text Color: On Primary Container</small>
             <div class="color-primary-box">BG: Primary <br /><small>
                 Text Color: On Primary
             </small></div>
         </div>
 
-        <div class="color-on-primary-box">On Primary</div>
-        <div>Color 3</div>
-        <div>Color 4</div>
+        <div class="color-secondary-container-box">
+            BG: Secondary Container <br /> <small>Text Color: On Secondary Container</small>
+            <div class="color-secondary-box">BG: Secondary <br /><small>
+                Text Color: On Secondary
+            </small></div>
+        </div>
+
+        <div class="color-tertiary-container-box">
+            BG: Secondary Container <br /> <small>Text Color: On Secondary Container</small>
+            <div class="color-tertiary-box">BG: Secondary <br /><small>
+                Text Color: On Secondary
+            </small></div>
+        </div>
+
     </div>
+
+    <h2>Monochrome Colors</h2>
+
+    <div class="grid-col-auto">
+        <div class="color-surface-container-box">
+            BG: Primary Container <br /> <small>Text Color: On Primary Container</small>
+            <div class="color-surface-box">BG: Primary <br /><small>
+                Text Color: On Primary
+            </small></div>
+        </div>
+
+        <div class="color-on-surface-container-box">
+            BG: Primary Container <br /> <small>Text Color: On Primary Container</small>
+            <div class="color-on-surface-box">BG: Primary <br /><small>
+                Text Color: On Primary
+            </small></div>
+        </div>
+
+        <div class="color-on-surface-container-box">
+            BG: Primary Container <br /> <small>Text Color: On Primary Container</small>
+            <div class="color-on-surface-box">BG: Primary <br /><small>
+                Text Color: On Primary
+            </small></div>
+        </div>
+
+        <div class="color-on-surface-container-box">
+            BG: Primary Container <br /> <small>Text Color: On Primary Container</small>
+            <div class="color-on-surface-box">BG: Primary <br /><small>
+                Text Color: On Primary
+            </small></div>
+        </div>
+
+    </div>
+
 
     <h3>Semantec Colors</h3>
-    <div class="grid-col-auto">
-        <div class="color-success-box swatch">Success</div>
-        <div class="color-error-box swatch">Error</div>
-        <div class="color-warning-box swatch">Warning</div>
-        <div class="color-info-box swatch">Info / Debug </div>
-    </div>
 
+    <div class="grid-col-auto">
+        <div class="color-negative-container-box">
+            BG: Negative Container <br /> <small>Text Color: On Negative Container</small>
+            <div class="color-negative-box">BG: Negative <br /><small>
+                Text Color: On Negative
+            </small></div>
+        </div>
+
+        <div class="color-positive-container-box">
+            BG: Positive Container <br /> <small>Text Color: On Positive Container</small>
+            <div class="color-positive-box">BG: Positive <br /><small>
+                Text Color: On Positive
+            </small></div>
+        </div>
+
+        <div class="color-informative-container-box">
+            BG: Informative Container <br /> <small>Text Color: On Informative Container</small>
+            <div class="color-informative-box">BG: Informative <br /><small>
+                Text Color: On Informative
+            </small></div>
+        </div>
+
+        <div class="color-notice-container-box">
+            BG: Notice Container <br /> <small>Text Color: On Notice Container</small>
+            <div class="color-notice-box">BG: Notice<br /><small>
+                Text Color: On Notice
+            </small></div>
+        </div>
+
+    </div>
 
     <div class="grid-col-auto">
         <section>
