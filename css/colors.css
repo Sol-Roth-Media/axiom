@@ -165,7 +165,7 @@
 
     /** Default Colors (no theme */
     /** Primary  */
-    --color-primary: #016e00;
+    --color_primary: #016e00;
     --color-on-primary: #ffffff;
     --color-primary-container: #77ff61;
     --color-on-primary-container: #002200;

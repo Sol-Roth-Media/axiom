@@ -5,19 +5,64 @@
     **/
 
 :root {
+
+    /** step variables **/
+    /** Follows this progression.
+96
+60 + 36
+32 + 28
+20 + 12
+8 + 4
+4 + 2
+2 +1
+1
+0
+    **/
+
+
+    /** Short hand human readable variables */
+    --space_none: 0px;
+    --space_tiny: 1px;
+    --space_small: 2px;
+    --space_normal: 4px;
+    --space_medium: 8px;
+    --space_medium_large: 12px;
+    --space_large: 16px;
+    --space_xlarge: 24px;
+    --space_xxlarge: 32px;
+
     /** Universal Variables **/
-    --padding: 4px;
-    --padding_small: 2px;
-    --padding_large: 12px;
-    --margin: 2px, auto, 2px, auto;
-    --margin_small: 0px, auto, 0px, auto;
+    --padding_tiny: var(--space_tiny);
+    --padding_small: var(--space_small);
+    --padding: var(--space_normal);
+    --padding_medium: var(--space_medium);
+    --padding_medium_large: var(--space_medium_large);
+    --padding_large: var(--space_large);
+    --padding_xlarge: var(--space_xlarge);
+    --padding_xxlarge: var(--space_xxlarge);
+
+    /** Universal Variables **/
+    --margin_tiny: var(--space_tiny), auto, var(--space_tiny), auto;
+    --margin_small: var(--space_small), auto, var(--space_small), auto;
+    --margin: var(--space_normal), auto, var(--space_normal), auto;
+    --margin_medium: var(--space_medium), auto, var(--space_medium), auto;
+    --margin_medium_large: var(--space_medium_large), auto, var(--space_medium_large), auto;
+    --margin_large: var(--space_large), auto, var(--space_large), auto;
+    --margin_xlarge: var(--space_xlarge), auto, var(--space_xlarge), auto;
+    --margin_xxlarge: var(--space_xxlarge), auto, var(--space_xxlarge), auto;
+
     --reading_with: 1200px;
     --width: 100%;
     --height: 100%;
     --border-radius: 12px;
     --line_height: 1.5;
     --font_family: var(--font_sans_serif);
+
     --font_size: 18px;
+    --font_size_small: 12px;
+    --font_size_medium: 22px;
+    --font_size_large: 28px;
+
     --font_style: normal;
     --font_variant: normal;
     --font_sans_serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -25,22 +70,6 @@
     --font_monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 
-    --step_up: 1.1025;
-    --step_up_x_2: calc(var(--step_up) * var(--step_up));
-    --step_up_x_3: calc(var(--step_up_x_2) * var(--step_up));
-    --step_up_x_4: calc(var(--step_up_x_3) * var(--step_up));
-    --step_up_x_5: calc(var(--step_up_x_4) * var(--step_up));
-    --step_up_x_6: calc(var(--step_up_x_5) * var(--step_up));
-
-    /** Step Down - used to calculate cascading sizes. The x powers are provided for easier to understand code later
-     down the line and to avoid using the power css function since it is not supported everywhere.
-     */
-    --step_down: .8975;
-    --step_down_x_2: calc(var(--step_down) * var(--step_down));
-    --step_down_x_3: calc(var(--step_down_x_2) * var(--step_down));
-    --step_down_x_4: calc(var(--step_down_x_3) * var(--step_down));
-    --step_down_x_5: calc(var(--step_down_x_4) * var(--step_down));
-    --step_down_x_6: calc(var(--step_down_x_5) * var(--step_down));
 
     --max_font_size: 38px;
     --min_font_size: 12px;
@@ -99,6 +128,26 @@
     --action_margin: 10px;
     --text_align: left;
 
+
+
+    --step_up: 1.1025;
+    --step_up_x_2: calc(var(--step_up) * var(--step_up));
+    --step_up_x_3: calc(var(--step_up_x_2) * var(--step_up));
+    --step_up_x_4: calc(var(--step_up_x_3) * var(--step_up));
+    --step_up_x_5: calc(var(--step_up_x_4) * var(--step_up));
+    --step_up_x_6: calc(var(--step_up_x_5) * var(--step_up));
+
+    /** Step Down - used to calculate cascading sizes. The x powers are provided for easier to understand code later
+     down the line and to avoid using the power css function since it is not supported everywhere.
+     */
+    --step_down: .8975;
+    --step_down_x_2: calc(var(--step_down) * var(--step_down));
+    --step_down_x_3: calc(var(--step_down_x_2) * var(--step_down));
+    --step_down_x_4: calc(var(--step_down_x_3) * var(--step_down));
+    --step_down_x_5: calc(var(--step_down_x_4) * var(--step_down));
+    --step_down_x_6: calc(var(--step_down_x_5) * var(--step_down));
+
+
     /** Headers (Text) */
     --header_padding_step_up: 10px;
     --header_padding: 8px;
@@ -120,6 +169,15 @@
     --site_header_size: var(--container_size);
     --site_header_max: var(--container_max); /** yay return of 960 since it's representational **/
 
+    --border_style: solid;
+    --border_small: 1px;
+    --border_normal: 1px;
+    --border_medium: 2px;
+    --border_large: 4px;
+
+    --border_radius: 6px;
+    --border_radius_small: 2px;
+    --border_radius_medium: 8px;
 
     --header_margin_top: 8px;
     --header_margin_right: auto;
@@ -139,7 +197,7 @@
     --header_font_style: normal;
     --header_font_variant: normal;
     --header_font_weight: 500;
-    --header_text_align: left;
+    --header_text_align: center;
     --header_max_line_height: 2;
     --header_min_line_height: 1;
     --header_step_up: var(--step_up);
@@ -174,6 +232,15 @@
     --list_padding-inline-start: 0rem;
 }
 
+.outline{
+    background-color: transparent;
+}
+
+.content-container-full h1, .content-container-full h2, .content-container-full h3, .content-container-full h4, .content-container-full h5, .content-container-full h6{
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 body {
     width: var(--width);
@@ -207,7 +274,7 @@ h1, h2, h3, h4, h5, h6, h7, h8, .h0{
     text-align: var(--header_text_align);
 
     /** BLRT - Bottom Left Right Top **/
-    margin: var(--header_margin);
+    margin: var(--margin_medium);
     margin-left: auto;
     margin-right: auto;
 }
@@ -217,7 +284,7 @@ h1, h2, h3, h4, h5, h6, h7, h8, .h0{
     font-size: calc(var(--header_max_font_size) * var(--step_up_x_2));
     /** margin: var(--header_margin);**/
     padding: var(--header_padding_step_up) var(--header_padding) var(--header_padding_step_up) var(--header_padding_step_up);
-    margin: var(--header_margin);
+    margin: var(--margin_medium);
     margin-left: auto;
     margin-right: auto;
 }
@@ -229,7 +296,7 @@ h1, h2, h3, h4, h5, h6, h7, h8, .h0{
 h1, .h1, h3 strong, .h3 strong {
     font-weight: var(--header_font_weight);
     font-size: var(--header_max_font_size);
-    margin: var(--header_margin);
+    margin: var(--margin_medium);
     padding: var(--header_padding);
 }
 
@@ -239,12 +306,12 @@ h1, .h1, h3 strong, .h3 strong {
 
 h1 strong, .h1 strong{
     font-size: calc(var(--header_max_strong_font_size) * var(--step_up_x_2));
-    margin: var(--header_margin);
+    margin: var(--margin_medium);
     padding: var(--header_padding);
     padding-top: var(--header_padding_step_up);
     padding-bottom: var(--header_padding_step_up);
-    margin-top: var(--header_margin_step_up);
-    margin-bottom: var(--header_margin_step_up);
+    margin-top: var(--margin_medium_large);
+    margin-bottom: var(--margin_medium_large);
 }
 
 
@@ -259,7 +326,7 @@ h1 strong, .h1 strong{
 h2, .h2, .h4 strong, h4 strong{
     font-weight: var(--header_font_weight);
     font-size: calc(var(--header_max_font_size) * var(--step_down));
-    margin: var(--header_margin);
+    margin: var(--margin_medium);
     margin-top: var(--header_margin_step_down);
     margin-bottom: var(--header_margin_step_down);
     padding: var(--header_padding);
@@ -270,7 +337,7 @@ h2, .h2, .h4 strong, h4 strong{
 h3, .h3, h5 strong, .h5 strong{
     font-weight: calc(var(--header_font_weight) - 100);
     font-size: calc(var(--header_max_font_size) * var(--step_down_x_2));
-    margin: var(--header_margin);
+    margin: var(--margin_medium);
     margin-top: var(--header_margin_step_down_x_2);
     margin-bottom: var(--header_margin_step_down_x_2);
     padding: var(--header_padding);
@@ -281,7 +348,7 @@ h3, .h3, h5 strong, .h5 strong{
 h4, .h4, h6 strong, .h6 strong{
     font-weight: calc(var(--header_font_weight) - 200);
     font-size: calc(var(--header_max_font_size) * var(--step_down_x_3));
-    margin: var(--header_margin);
+    margin: var(--margin_medium);
     margin-top: var(--header_margin_step_down_x_3);
     margin-bottom: var(--header_margin_step_down_x_3);
     padding: var(--header_padding);
@@ -292,20 +359,20 @@ h4, .h4, h6 strong, .h6 strong{
 h5, .h5{
     font-weight: calc(var(--header_font_weight) - 300);
     font-size: calc(var(--header_max_font_size) * var(--step_down_x_4));
-    margin: var(--header_margin);
-    margin-top: var(--header_margin_step_down_x_4);
-    margin-bottom: var(--header_margin_step_down_x_4);
-    padding: var(--header_padding);
-    padding-top: var(--header_padding_step_down_x_4);
-    padding-bottom: var(--header_padding_step_down_x_4);
+    margin: var(--margin_medium);
+    margin-top: var(--margin);
+    margin-bottom: var(--margin);
+    padding: var(--padding_medium);
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
 }
 
 h6, .h6{
     font-weight: calc(var(--header_font_weight) - 400);
     font-size: calc(var(--header_max_font_size) * var(--step_down_x_5));
-    margin: var(--header_margin);
-    margin-top: var(--header_margin_step_down_x_5);
-    margin-bottom: var(--header_margin_step_down_x_5);
+    margin: var(--margin_medium);
+    margin-top: var(--margin_small);
+    margin-bottom: var(--margin_small);
     padding: var(--header_padding);
     padding-top: var(--header_padding_step_down_x_5);
     padding-bottom: var(--header_padding_step_down_x_5);
@@ -328,11 +395,17 @@ header hgroup p{
 /**
   Article Elements and styles
  */
-article p{
-    width: clamp(45ch, 50%, 75ch);
-    /**
-    According to The Elements of Typographic Style - ensure width from 45 to 75 characters http://webtypography.net/2.1.2#:~:text=%E2%80%9CAnything%20from%2045%20to%2075,is%2040%20to%2050%20characters.%E2%80%9D
-    **/
+
+article{
+    width: clamp(var(--site_header_min),var(--site_header_size),var(--site_header_max));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article p, article ul li{
+    width: clamp(45ch, 70%, 90ch);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 span, .span {

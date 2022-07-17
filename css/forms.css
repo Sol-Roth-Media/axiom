@@ -1,0 +1,70 @@
+button {
+    padding: var(--padding_medium);
+    margin: var(--margin_medium);
+    border-style: var(--border_style);
+    border-width: var(--border_normal);
+    border-radius: var(--border_radius);
+    color: var(--color-on-primary-container);
+    border-color: var(--color-on-primary-container);
+    background-color: var(--color-primary-container);
+    font-family: var(--font_family);
+    font-weight: 500;
+}
+
+button:disabled,
+button[disabled]{
+    opacity: .50;
+}
+
+button.subtle{
+    background-color: #ebf4e8;
+    border-color: var(--color-outline);
+    color: var(--color-outline);
+}
+
+button.outline {
+  border-color: var(--color-outline);
+
+}
+
+small button{
+    padding: var(--padding_small);
+    margin: var(--margin_small);
+    border-width: var(--border_small);
+    border-radius: var(--border_radius_small);
+    font-size: var(--font_size_small);
+    font-weight: bold;
+
+}
+
+strong button{
+    padding: var(--padding_medium_large);
+    margin: var(--margin_medium_large);
+    border-width: var(--border_medium);
+    border-radium: var(--border_radius_medium);
+    font-weight: bolder;
+}
+
+button.positive{
+    background-color: var(--color-positive);
+    color: var(--color-on-positive);
+}
+
+button.negative{
+    background-color: var(--color-negative);
+    color: var(--color-on-negative);
+}
+
+button.notice{
+    background-color: var(--color-notice);
+    color: var(--color-on-notice);
+}
+
+.negative-container{
+
+}
+
+button.informative{
+    background-color: var(--color-informative);
+    color: var(--color-on-informative);
+}
