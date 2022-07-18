@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/colors.css"/>
     <link rel="stylesheet" href="./css/axiom.css"/>
+    <link rel="stylesheet" href="./css/content.css"/>
     <link rel="stylesheet" href="./css/grid.css"/>
     <link rel="stylesheet" href="./css/navbar.css"/>
     <link rel="stylesheet" href="./css/utility.css"/>
@@ -93,19 +94,15 @@
         </hgroup>
     </header>
 
-
-
     <main class="wrapper">
         <!-- Main Content -->
 
         <section class="wrapper">
 
-            <span>Tips: Use <code>&amp;nbsp;</code> instead of space between words you don't want to break apart when resizing, useful for buttons</span>
-
             <table>
                 <thead>
                 <tr>
-                    <th class="table-header">
+                    <th class="table-header" colspan="100">
                         <span class="h3">Buttons</span> <!-- you can't use an h1 here, but we can use the class to match size-->
                         <p>Button elements with primarcy colors and icon styling.</p>
                     </th>
@@ -184,8 +181,14 @@
                     <td><strong><button class="informative"><i>&#9733;</i> Press Me</button></strong></td>
                     <td><button class="informative icon"><i>&#9733;</i> Press Me</button></td>
                 </tr>
-
                 </tbody>
+
+                <tfoot>
+                <tr>
+                    <td colspan="7">There is no <code>:visited state</code> included because it's not valuable for most use cases</td>
+                </tr>
+                </tfoot>
+
             </table>
 
 
@@ -251,23 +254,18 @@
                 </tr>
 
                 </tbody>
+
+                <tfoot>
+                <tr>
+                    <td>There is no <code>:visited state</code> included because it's not valuable for most use cases</td>
+                </tfoot>
+
             </table>
 
 
 
         </section>
 
-
-        <article>
-            <section>
-                <h2>Components</h2>
-
-
-            </section>
-
-
-
-        </article>
 
 
         <article>
@@ -524,10 +522,9 @@
 
 
 <article class="content-container-full">
-    <h2 class="h1">Content</h2>
 
+    <section>
     <h2>Typography</h2>
-
     <!-- Standard Headings -->
     <h1>H0 Heading with .h0 class <small>Small Inside H1</small></h1>
     <h1>H1 Heading or .h1 class <small>Small Inside H1</small></h1>
@@ -536,9 +533,10 @@
     <h4>H4 Heading or .h4 class <small>Small Inside H4</small></h4>
     <h5>H5 Heading or .h5 class <small>Small Inside H5</small></h5>
     <h6>H6 Heading or .h6 class <small>Small Inside H6</small></h6>
-
+    </section>
 
     <!-- Display Headers-->
+    <section>
     <h3>Display Headers</h3>
     <p>Use the strong tag to make headers even more prominent.</p>
     <h1 class="h0"><strong>H0 class </strong> Test Outside</h1>
@@ -548,10 +546,7 @@
     <h4><strong>H4 Heading or .h4 class</strong> Test Outside</h4>
     <h5><strong>H5 Heading or .h5 class</strong> Test Outside</h5>
     <h6><strong>H6 Heading or .h6 class</strong> Test Outside</h6>
-
-    <p>
-
-    </p>
+    </section>
 
     <!-- Base type size -->
     <p>The base type is 15px over 1.6 line height (24px)</p>

@@ -9,9 +9,9 @@ table {
     background-color: var(--color_off_white);
     border-width: 1px;
     border-color: #f2f0f4;
+    border-color: #e5e5e5;
     border-style: solid;
-    border-radius: var(--border_radius_small);
-    box-shadow: 3px 3px 8px rgba(0,0,0,.3);
+    border-radius: var(--border_radius_medium);
     border-spacing: 0px;
 }
 
@@ -42,4 +42,19 @@ tr{
 
 table thead th.table-header{
     border-width: 0px;
+}
+
+table tfoot tr td{
+    border-width: 0px;
+    padding: var(--padding_medium);
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-top: 300px;
+    padding-top: var(--padding_xlarge);
+    padding-bottom: var(--padding_large);
+    font-size: 16px
+}
+
+table tfoot{
+    padding: var(--padding_medium_large);
 }
