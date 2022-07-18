@@ -183,7 +183,7 @@
     --border_radius: 6px;
     --border_radius_small: 2px;
     --border_radius_medium: 8px;
-    --border_radius_large: 16px;
+    --border_radius_large: 14px;
 
     --header_margin_top: 8px;
     --header_margin_right: auto;
@@ -220,7 +220,6 @@
     --header_min_padding: var(--min_padding);
     --header_max_margin: var(--max_margin);
     --header_min_margin: var(--min_margin);
-
 
     /** Text Standouts **/
     --text_standout_font_size: 28px;

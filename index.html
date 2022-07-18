@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/navbar.css"/>
     <link rel="stylesheet" href="./css/utility.css"/>
     <link rel="stylesheet" href="./css/logo.css"/>
+    <link rel="stylesheet" href="./css/tables.css"/>
     <link rel="stylesheet" href="./css/forms.css"/>
 </head>
 
@@ -96,130 +97,175 @@
 
     <main class="wrapper">
         <!-- Main Content -->
+
+        <section class="wrapper">
+
+            <span>Tips: Use <code>&amp;nbsp;</code> instead of space between words you don't want to break apart when resizing, useful for buttons</span>
+
+            <table>
+                <thead>
+                <tr>
+                    <th class="table-header">
+                        <span class="h3">Buttons</span> <!-- you can't use an h1 here, but we can use the class to match size-->
+                        <p>Button elements with primarcy colors and icon styling.</p>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>Location or class</th>
+                    <th>Normal</th>
+                    <th>Outline</th>
+                    <th>Small</th>
+                    <th>Strong</th>
+                    <th>Icon</th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+
+                <tr>
+                    <td>Normal</td>
+                    <td>Anywhere / none</td>
+                    <td><button><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button class="outline"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><small><button><i>&#9733;</i> Press&nbsp;Me</button></small></td>
+                    <td><strong><button><i>&#9733;</i> Press&nbsp;Me</button></strong></td>
+                    <td><button class="icon"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                </tr>
+
+                <tr>
+                    <td>Subtle</td>
+                    <td>Anywhere / none</td>
+                    <td><button class="subtle"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button class="subtle outline"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><small><button class="subtle"><i>&#9733;</i> Press&nbsp;Me</button></small></td>
+                    <td><strong><button class="subtle"><i>&#9733;</i> Press&nbsp;Me</button></strong></td>
+                    <td><button class="subtle icon" ><i>&#9733;</i> Press&nbsp;Me</button></td>
+                </tr>
+
+                <tr>
+                    <td>Positive</td>
+                    <td>Anywhere</td>
+                    <td><button class="positive"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button class="positive outline"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><small><button class="positive"><i>&#9733;</i> Press&nbsp;Me</button></small></td>
+                    <td><strong><button class="positive"><i>&#9733;</i> Press&nbsp;Me</button></strong></td>
+                    <td><button class="positive icon"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                </tr>
+
+                <tr>
+                    <td>Negative</td>
+                    <td>Anywhere</td>
+                    <td><button class="negative"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button class="negative  outline"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><small><button class="negative"><i>&#9733;</i> Press&nbsp;Me</button></small></td>
+                    <td><strong><button class="negative"><i>&#9733;</i> Press&nbsp;Me</button></strong></td>
+                    <td><button class="negative icon"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                </tr>
+
+                <tr>
+                    <td>Notice</td>
+                    <td>Anywhere</td>
+                    <td><button class="notice"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button class="notice  outline"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><small><button class="notice"><i>&#9733;</i> Press&nbsp;Me</button></small></td>
+                    <td><strong><button class="notice"><i>&#9733;</i> Press&nbsp;Me</button></strong></td>
+                    <td><button class="notice icon"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                </tr>
+
+
+                <tr>
+                    <td>Info</td>
+                    <td>Anywhere</td>
+                    <td><button class="informative"><i>&#9733;</i> Press Me</button></td>
+                    <td><button class="informative outline"><i>&#9733;</i> Press Me</button></td>
+                    <td><small><button class="informative"><i>&#9733;</i> Press Me</button></small></td>
+                    <td><strong><button class="informative"><i>&#9733;</i> Press Me</button></strong></td>
+                    <td><button class="informative icon"><i>&#9733;</i> Press Me</button></td>
+                </tr>
+
+                </tbody>
+            </table>
+
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Hover</th>
+                    <th>Focus</th>
+                    <th>Active</th>
+                    <th>Disabled</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>Normal</td>
+                    <td><button class="hover"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button class="focus"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button class="active"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button disabled><i>&#9733;</i> Press&nbsp;Me</button></td>
+                </tr>
+
+                <tr>
+                    <td>Subtle</td>
+                    <td><button class="subtle"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button class="subtle"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button class="subtle"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button disabled class="subtle"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                </tr>
+
+                <tr>
+                    <td>Positive</td>
+                    <td><button class="positive"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button class="positive"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button class="positive"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button disabled class="positive"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                </tr>
+
+                <tr>
+                    <td>Negative</td>
+                    <td><button class="negative"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button class="negative"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button class="negative"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button disabled class="negative"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                </tr>
+
+                <tr>
+                    <td>Notice</td>
+                    <td><button class="notice"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button class="notice"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button class="notice"><i>&#9733;</i> Press&nbsp;Me</button></td>
+                    <td><button disabled class="notice"><i>&#9733;</i> Press Me</button></td>
+                </tr>
+
+
+                <tr>
+                    <td>Info</td>
+                    <td><button class="informative"><i>&#9733;</i> Press Me</button></td>
+                    <td><button class="informative"><i>&#9733;</i> Press Me</button></td>
+                    <td><button class="informative"><i>&#9733;</i> Press Me</button></td>
+                    <td><button class="informative" disabled><i>&#9733;</i> Press Me</button></td>
+                </tr>
+
+                </tbody>
+            </table>
+
+
+
+        </section>
+
+
         <article>
             <section>
                 <h2>Components</h2>
 
 
             </section>
-            <section>
-                <h3>Buttons</h3>
 
 
-                <table>
-                    <thead>
-                    <tr>
-                        <th colspan="6">Buttons</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Name</td>
-                        <td>Location or class</td>
-                        <td>Normal</td>
-                        <td>Outline</td>
-                        <td>Small</td>
-                        <td>Strong</td>
-                        <td>Icon</td>
-                        <td>Hover</td>
-                        <td>Focus</td>
-                        <td>Click</td>
-                        <td>Disabled</td>
-                    </tr>
-
-                    <tr>
-                        <td>Normal</td>
-                        <td>Anywhere / none</td>
-                        <td><button>Press Me</button></td>
-                        <td><button class="outline">Press Me</button></td>
-                        <td><small><button>Press Me</button></small></td>
-                        <td><strong><button>Press Me</button></strong></td>
-                        <td><button>Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><button disabled>Press Me</button></td>
-                    </tr>
-
-                    <tr>
-                        <td>Subtle</td>
-                        <td>Anywhere / none</td>
-                        <td><button class="subtle">Press Me</button></td>
-                        <td><button class="subtle outline">Press Me</button></td>
-                        <td><small><button class="subtle">Press Me</button></small></td>
-                        <td><strong><button class="subtle">Press Me</button></strong></td>
-                        <td><button class="subtle">Press Me</button></td>
-                        <td><button class="subtle">Press Me</button></td>
-                        <td><button class="subtle">Press Me</button></td>
-                        <td><button class="subtle">Press Me</button></td>
-                        <td><button disabled class="subtle">Press Me</button></td>
-                    </tr>
-
-
-                    <tr>
-                        <td>Positive</td>
-                        <td>Anywhere</td>
-                        <td><button class="positive">Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><small><button>Press Me</button></small></td>
-                        <td><strong><button>Press Me</button></strong></td>
-                        <td><button>Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><button disabled class="positive">Press Me</button></td>
-                    </tr>
-
-                    <tr>
-                        <td>Negative</td>
-                        <td>Anywhere</td>
-                        <td><button class="negative">Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><small><button>Press Me</button></small></td>
-                        <td><strong><button>Press Me</button></strong></td>
-                        <td><button>Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><button disabled class="negative">Press Me</button></td>
-                    </tr>
-
-                    <tr>
-                        <td>Notice</td>
-                        <td>Anywhere</td>
-                        <td><button class="notice">Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><small><button>Press Me</button></small></td>
-                        <td><strong><button>Press Me</button></strong></td>
-                        <td><button>Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><button disabled class="notice">Press Me</button></td>
-                    </tr>
-
-
-                    <tr>
-                        <td>Info</td>
-                        <td>Anywhere</td>
-                        <td><button class="informative">Press Me</button></td>
-                        <td><button class="informative">Press Me</button></td>
-                        <td><small><button class="informative">Press Me</button></small></td>
-                        <td><strong><button class="informative">Press Me</button></strong></td>
-                        <td><button class="informative">Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><button>Press Me</button></td>
-                        <td><button class="informative" disabled>Press Me</button></td>
-                    </tr>
-
-                    </tbody>
-                </table>
-
-
-
-
-            </section>
 
         </article>
 
@@ -522,6 +568,7 @@
 
 <article>
     <h2>Buttons</h2>
+
 
     <!-- Standard buttons -->
     <a class="button" href="#">Anchor button</a>

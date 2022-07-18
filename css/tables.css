@@ -11,7 +11,7 @@ table {
     border-color: #f2f0f4;
     border-style: solid;
     border-radius: var(--border_radius_small);
-    box-shadow: 3px 3px 20px rgba(0,0,0,.3);
+    box-shadow: 3px 3px 8px rgba(0,0,0,.3);
     border-spacing: 0px;
 }
 
@@ -37,4 +37,9 @@ tr{
     border-style: var(--border_style);
     border-bottom-width: var(--border_normal);
     border-color: var(--color-outline);
+}
+
+
+table thead th.table-header{
+    border-width: 0px;
 }

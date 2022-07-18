@@ -2,6 +2,7 @@ button {
     padding: var(--padding_medium);
     margin: var(--margin_medium);
     border-style: var(--border_style);
+    border-style: outset;
     border-width: var(--border_normal);
     border-radius: var(--border_radius);
     color: var(--color-on-primary-container);
@@ -46,15 +47,17 @@ button.icon{
 }
 
 button.icon i{
-  font-size: 22px;
+  font-size: 16px;
 }
 
 strong button{
     padding: var(--padding_medium_large);
     margin: var(--margin_medium_large);
-    border-width: var(--border_medium);
+    border-width: 1px;
     border-radium: var(--border_radius_medium);
-    font-weight: bolder;
+    font-weight: 700;
+    border-style: outset;
+    border-color: revert;
 }
 
 button.positive{
@@ -124,3 +127,19 @@ button.informative.outline{
 }
 
 
+button:hover, button.hover{
+    filter: brightness(115%);
+    border-style: inset;
+}
+
+button:focus, button.focus{;
+    filter: brightness(85%);
+    border-bottom-style: dotted;
+    border-bottom-color: var(--color-outline);
+
+}
+
+button:active button:active{
+    filter: brightness(75%);
+
+}
