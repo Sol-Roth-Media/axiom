@@ -27,9 +27,12 @@
     --space_normal: 4px;
     --space_medium: 8px;
     --space_medium_large: 12px;
-    --space_large: 16px;
-    --space_xlarge: 24px;
-    --space_xxlarge: 32px;
+    --space_large: 24px;
+    --space_xlarge: 36px;
+    --space_xxlarge: 48px;
+    --space_extreme: 98px;
+
+    --size_small_height: 22px;
 
     /** Universal Variables **/
     --padding_tiny: var(--space_tiny);
@@ -57,9 +60,11 @@
     --border-radius: 12px;
     --line_height: 1.5;
     --font_family: var(--font_sans_serif);
+    --font_family_narrow: "Arial Narrow";
 
     --font_size: 18px;
-    --font_size_small: 12px;
+    --font_size_tiny: 12px;
+    --font_size_small: 14px;
     --font_size_medium: 22px;
     --font_size_large: 28px;
 
@@ -178,6 +183,7 @@
     --border_radius: 6px;
     --border_radius_small: 2px;
     --border_radius_medium: 8px;
+    --border_radius_large: 16px;
 
     --header_margin_top: 8px;
     --header_margin_right: auto;
@@ -261,6 +267,8 @@ body {
     padding: var(--wrapper_padding);
     margin: var(--wrapper_margin);
 }
+
+
 
 header{
     margin-left: auto;
