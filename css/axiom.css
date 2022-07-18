@@ -273,6 +273,7 @@ header{
     margin-left: auto;
     margin-right: auto;
     width: clamp(var(--site_header_min),var(--site_header_size),var(--site_header_max));
+    padding: var(--padding_large);
 }
 
 /** Typography **/
