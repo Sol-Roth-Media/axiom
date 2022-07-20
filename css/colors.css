@@ -12,32 +12,55 @@
     --color-secondary-hue: calc(var(--color-primary-hue) + var(--color_big_step) + var(--color_big_step));
     --color-tertiary-hue: calc(var(--color-secondary-hue) + var(--color_big_step) + var(--color_big_step));
     --primary_bright: 22%;
+    --primary_dark: 12%;
+    --primary_container_bright: 18%;
     --container_brightness: calc(100% - var(--primary_bright));
 
     --color-primary-saturation: 100%;
     --color-primary-light: 22%;
+    --color-primary-dark: 18%;
     --color_primary_alpha: 1;
-
     --mono_saturation: 0%;
 
+
+
+
+    /** Surface Colors */
+    --color_surface: hsla(0, 0%, 0%, 1);
+    --color_on_surface: hsla(0, 0%, 100%, 1);
+    --color_surface_invert: hsla(0, 0%, 0%, 1);
+    --color_on_surface_invert: hsla(0, 0%, 100%, 1);
+
+    /** Color on Outline */
+    --color_on_outline: white;
 
     /** Primary  */
     --color-primary: hsla(var(--color-primary-hue), 100%, var(--primary_bright), 1);
     --color-on-primary: hsla(var(--color-primary-hue), 100%, 98%, 1);
-    --color-primary-container: hsla(calc(var(--color-primary-hue) - var(--color_small_step)), 100%, var(--primary_bright), 1);
+    --color-primary-container: hsla(calc(var(--color-primary-hue) - var(--color_small_step)), 100%, var(--primary_dark), 1);
     --color-on-primary-container: hsla(calc(var(--color-primary-hue) - var(--color_small_step) - var(--color_small_step)), 100%, var(--container_brightness), 1);
+
+    /** Mono **/
+    /** Primary  */
+    --color-primary-mono: hsla(var(--color-primary-hue), var(--mono_saturation), var(--primary_bright), 1);
+    --color-on-primary-mono: hsla(var(--color-primary-hue), var(--mono_saturation), 98%, 1);
+    --color-primary-container-mono: hsla(calc(var(--color-primary-hue) - var(--color_small_step)), var(--mono_saturation), var(--primary_dark), 1);
+    --color-on-primary-container-mono: hsla(calc(var(--color-primary-hue) - var(--color_small_step) - var(--color_small_step)), var(--mono_saturation), var(--container_brightness), 1);
+
 
     /** Primary MONO Set Monochrome by reducing saturation to 0 */
     --color-primary-mono: hsl(var(--color-primary-hue), 0%, var(--color-primary-light));
     --color-on-primary-mono: hsl(0, 0%, 100%);
     --color-primary-container-mono: hsl(112, 0%, 69%);
-    --color-on-primary-containe-monor: hsl(120, 0%, 7%);
+    --color-on-primary-container-mono: hsl(120, 0%, 7%);
+
+
 
     /** Secondary */
     /** Primary  */
     --color-secondary: hsla(var(--color-secondary-hue), 100%, var(--primary_bright), 1);
     --color-on-secondary: hsla(var(--color-secondary-hue), 100%, 98%, 1);
-    --color-secondary-container: hsla(calc(var(--color-secondary-hue) - var(--color_small_step)), 100%, var(--primary_bright), 1);
+    --color-secondary-container: hsla(calc(var(--color-secondary-hue) - var(--color_small_step)), 100%, var(--primary_dark), 1);
     --color-on-secondary-container: hsla(calc(var(--color-secondary-hue) - var(--color_small_step) - var(--color_small_step)), 100%, var(--container_brightness), 1);
 
     /** Tertiary
@@ -51,16 +74,9 @@
     /** Primary  */
     --color-tertiary: hsla(var(--color-tertiary-hue), 100%, var(--primary_bright), 1);
     --color-on-tertiary: hsla(var(--color-tertiary-hue), 100%, 98%, 1);
-    --color-tertiary-container: hsla(calc(var(--color-tertiary-hue) - var(--color_small_step)), 100%, var(--primary_bright), 1);
+    --color-tertiary-container: hsla(calc(var(--color-tertiary-hue) - var(--color_small_step)), 100%, var(--primary_dark), 1);
     --color-on-tertiary-container: hsla(calc(var(--color-tertiary-hue) - var(--color_small_step) - var(--color_small_step)), 100%, var(--container_brightness), 1);
 
-
-    /** Mono **/
-    /** Primary  */
-    --color-primary-mono: hsla(var(--color-primary-hue), var(--mono_saturation), var(--primary_bright), 1);
-    --color-on-primary-mono: hsla(var(--color-primary-hue), var(--mono_saturation), 98%, 1);
-    --color-primary-container-mono: hsla(calc(var(--color-primary-hue) - var(--color_small_step)), var(--mono_saturation), var(--primary_bright), 1);
-    --color-on-primary-container-mono: hsla(calc(var(--color-primary-hue) - var(--color_small_step) - var(--color_small_step)), var(--mono_saturation), var(--container_brightness), 1);
 
 
     /** Semantec Colors Inspired by Adobe Spectrum **/
@@ -95,8 +111,7 @@
     --color-backround-dark: #1b1b1f;
     --color-on-background-: #1b1b1f;
 
-    --color-surface: #fefbff;
-    --color-on-surface: #1b1b1f;
+
 
     --color-surface-variant: #e1e2ec;
     --color-on-surface-variant: #44474f;
@@ -217,11 +232,30 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     height: 120px;
 }
 
+
+.color-surface-box{
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    padding: var(--padding);
+    margin: var(--margin);
+    border-radius: var(--border_radius_small);
+}
+
+.color-surface-invert-box{
+    background-color: var(--color_surface_invert);
+    color: var(--color_on_surface_invert);
+    padding: var(--padding);
+    margin: var(--margin);
+    border-radius: var(--border_radius_small);
+}
+
+
 .color-primary-box{
     background-color: var(--color-primary);
     color: var(--color-on-primary);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-on-primary-box{
@@ -229,6 +263,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-primary);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-primary-container-box{
@@ -236,11 +271,13 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     padding: var(--padding);
     margin: var(--margin);
     color: var(--color-on-primary-container);
+    border-radius: var(--border_radius_small);
 }
 
 .color-on-primary-container-box{
     background-color: var(--color-on-primary-container);
     color: var(--color-primary-container);
+    border-radius: var(--border_radius_small);
 }
 
 /** Color Primary Mono */
@@ -249,6 +286,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-on-primary-mono);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-on-primary-mono-box{
@@ -256,6 +294,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-primary-mono);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-primary-container-mono-box{
@@ -263,11 +302,13 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     padding: var(--padding);
     margin: var(--margin);
     color: var(--color-on-primary-container-mono);
+    border-radius: var(--border_radius_small);
 }
 
 .color-on-primary-container-mono-box{
     background-color: var(--color-on-primary-container-mono);
     color: var(--color-primary-container-mono);
+    border-radius: var(--border_radius_small);
 }
 
 /** Color Secondary */
@@ -276,6 +317,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-on-secondary);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-on-secondary-box{
@@ -283,6 +325,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-secondary);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-secondary-container-box{
@@ -290,11 +333,13 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     padding: var(--padding);
     margin: var(--margin);
     color: var(--color-on-secondary-container);
+    border-radius: var(--border_radius_small);
 }
 
 .color-on-secondary-container-box{
     background-color: var(--color-on-secondary-container);
     color: var(--color-secondary-container);
+    border-radius: var(--border_radius_small);
 }
 
 /** Tertiary Color Box */
@@ -303,6 +348,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-on-tertiary);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-on-tertiary-box{
@@ -310,6 +356,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-tertiary);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-tertiary-container-box{
@@ -317,11 +364,13 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     padding: var(--padding);
     margin: var(--margin);
     color: var(--color-on-tertiary-container);
+    border-radius: var(--border_radius_small);
 }
 
 .color-on-tertiary-container-box{
     background-color: var(--color-on-tertiary-container);
     color: var(--color-tertiary-container);
+    border-radius: var(--border_radius_small);
 }
 
 /** Negative Color Box **/
@@ -330,6 +379,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-on-negative);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-on-negative-box{
@@ -337,6 +387,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-negative);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-negative-container-box{
@@ -344,11 +395,13 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     padding: var(--padding);
     margin: var(--margin);
     color: var(--color-on-negative-container);
+    border-radius: var(--border_radius_small);
 }
 
 .color-on-negative-container-box{
     background-color: var(--color-on-negative-container);
     color: var(--color-negative-container);
+    border-radius: var(--border_radius_small);
 }
 
 
@@ -359,6 +412,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-on-positive);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-on-positive-box{
@@ -366,6 +420,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-positive);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-positive-container-box{
@@ -373,11 +428,13 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     padding: var(--padding);
     margin: var(--margin);
     color: var(--color-on-positive-container);
+    border-radius: var(--border_radius_small);
 }
 
 .color-on-positive-container-box{
     background-color: var(--color-on-positive-container);
     color: var(--color-positive-container);
+    border-radius: var(--border_radius_small);
 }
 
 
@@ -394,6 +451,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-informative);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-informative-container-box{
@@ -401,11 +459,13 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     padding: var(--padding);
     margin: var(--margin);
     color: var(--color-on-informative-container);
+    border-radius: var(--border_radius_small);
 }
 
 .color-on-informative-container-box{
     background-color: var(--color-on-informative-container);
     color: var(--color-informative-container);
+    border-radius: var(--border_radius_small);
 }
 
 
@@ -415,6 +475,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-on-notice);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-on-notice-box{
@@ -422,6 +483,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-notice);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-notice-container-box{
@@ -429,11 +491,13 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     padding: var(--padding);
     margin: var(--margin);
     color: var(--color-on-notice-container);
+    border-radius: var(--border_radius_small);
 }
 
 .color-on-notice-container-box{
     background-color: var(--color-on-notice-container);
     color: var(--color-notice-container);
+    border-radius: var(--border_radius_small);
 }
 
 
@@ -443,6 +507,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-on-surface);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-on-surface-box{
@@ -450,6 +515,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-surface);
     padding: var(--padding);
     margin: var(--margin);
+    border-radius: var(--border_radius_small);
 }
 
 .color-surface-container-box{
@@ -473,7 +539,7 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
 /** Monochrome */
 
 
---color-outline: #73796e;
+
 --color-background: #fefbff;
 --color-on-background-: #1b1b1f;
 --color-surface: #fefbff;
