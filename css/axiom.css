@@ -74,8 +74,6 @@
     /** Fonts **/
     --font_monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-
-
     --max_font_size: 38px;
     --min_font_size: 12px;
     --max_padding: 20px;
@@ -398,7 +396,24 @@ header hgroup p{
     margin-right: auto;
 }
 
+/** Misc Elements  **/
+pre {
+    font-family: var(--font_monospace);
+    padding: var(--padding);
+    margin: var(--margin);
+}
 
+/* Code in text */
+p > code,
+li > code,
+dd > code,
+td > code {
+    background: var(--color_primary_mono);
+    word-wrap: break-word;
+    box-decoration-break: clone;
+    padding: var(--padding_medium);
+    border-radius: var(--border_radius);
+}
 
 /**
   Article Elements and styles

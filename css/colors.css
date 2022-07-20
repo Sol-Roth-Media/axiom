@@ -1,22 +1,67 @@
 
 :root, html[data-theme='light'], .light-theme {
+
+    /** Color Utilities **/
+    --color_big_step: 38;
+    --color_small_step: calc(48 - var(--color_big_step));
+    --almost_white_bright: 98%;
+    --almost_black_dark: calc(100 - var(--almost_white_bright));
+
+    /** Color Elements */
+    --color-primary-hue: 120;
+    --color-secondary-hue: calc(var(--color-primary-hue) + var(--color_big_step) + var(--color_big_step));
+    --color-tertiary-hue: calc(var(--color-secondary-hue) + var(--color_big_step) + var(--color_big_step));
+    --primary_bright: 22%;
+    --container_brightness: calc(100% - var(--primary_bright));
+
+    --color-primary-saturation: 100%;
+    --color-primary-light: 22%;
+    --color_primary_alpha: 1;
+
+    --mono_saturation: 0%;
+
+
     /** Primary  */
-    --color-primary: #016e00;
-    --color-on-primary: #ffffff;
-    --color-primary-container: #77ff61;
-    --color-on-primary-container: #002200;
+    --color-primary: hsla(var(--color-primary-hue), 100%, var(--primary_bright), 1);
+    --color-on-primary: hsla(var(--color-primary-hue), 100%, 98%, 1);
+    --color-primary-container: hsla(calc(var(--color-primary-hue) - var(--color_small_step)), 100%, var(--primary_bright), 1);
+    --color-on-primary-container: hsla(calc(var(--color-primary-hue) - var(--color_small_step) - var(--color_small_step)), 100%, var(--container_brightness), 1);
+
+    /** Primary MONO Set Monochrome by reducing saturation to 0 */
+    --color-primary-mono: hsl(var(--color-primary-hue), 0%, var(--color-primary-light));
+    --color-on-primary-mono: hsl(0, 0%, 100%);
+    --color-primary-container-mono: hsl(112, 0%, 69%);
+    --color-on-primary-containe-monor: hsl(120, 0%, 7%);
 
     /** Secondary */
-    --color-secondary: #54634d;
-    --color-on-secondary: #ffffff;
-    --color-secondary-container: #d7e8cd;
-    --color-on-secondary-container: #121f0e;
+    /** Primary  */
+    --color-secondary: hsla(var(--color-secondary-hue), 100%, var(--primary_bright), 1);
+    --color-on-secondary: hsla(var(--color-secondary-hue), 100%, 98%, 1);
+    --color-secondary-container: hsla(calc(var(--color-secondary-hue) - var(--color_small_step)), 100%, var(--primary_bright), 1);
+    --color-on-secondary-container: hsla(calc(var(--color-secondary-hue) - var(--color_small_step) - var(--color_small_step)), 100%, var(--container_brightness), 1);
 
-    /** Tertiary */
-    --color-tertiary: #386568;
+    /** Tertiary
+    --color-tertiary:  hsla(200, 100%, 22%, 1);
     --color-on-tertiary: #ffffff;
     --color-tertiary-container: #bcebee;
     --color-on-tertiary-container: #002022;
+    /** */
+
+    /** Secondary */
+    /** Primary  */
+    --color-tertiary: hsla(var(--color-tertiary-hue), 100%, var(--primary_bright), 1);
+    --color-on-tertiary: hsla(var(--color-tertiary-hue), 100%, 98%, 1);
+    --color-tertiary-container: hsla(calc(var(--color-tertiary-hue) - var(--color_small_step)), 100%, var(--primary_bright), 1);
+    --color-on-tertiary-container: hsla(calc(var(--color-tertiary-hue) - var(--color_small_step) - var(--color_small_step)), 100%, var(--container_brightness), 1);
+
+
+    /** Mono **/
+    /** Primary  */
+    --color-primary-mono: hsla(var(--color-primary-hue), var(--mono_saturation), var(--primary_bright), 1);
+    --color-on-primary-mono: hsla(var(--color-primary-hue), var(--mono_saturation), 98%, 1);
+    --color-primary-container-mono: hsla(calc(var(--color-primary-hue) - var(--color_small_step)), var(--mono_saturation), var(--primary_bright), 1);
+    --color-on-primary-container-mono: hsla(calc(var(--color-primary-hue) - var(--color_small_step) - var(--color_small_step)), var(--mono_saturation), var(--container_brightness), 1);
+
 
     /** Semantec Colors Inspired by Adobe Spectrum **/
     /** Negative **/
@@ -55,46 +100,14 @@
 
     --color-surface-variant: #e1e2ec;
     --color-on-surface-variant: #44474f;
+
     --color-inverse-surface: #303033;
     --color-inverse-on-surface: #f2f0f4;
+    --color_off_white: #ECFDFF;
 }
 
 :root, html[data-theme="dark"], .dark-theme{
-    --color-primary: #45e335;
-    --color-on-primary: #003a00;
-    --color-primary-container: #015300;
-    --color-on-primary-container: #77ff61;
-
-    --color-secondary: #bbcbb2;
-    --color-on-secondary: #263422;
-    --color-secondary-container: #3c4b37;
-    --color-on-secondary-container: #d7e8cd;
-
-    --color-tertiary: #a0cfd2;
-    --color-on-tertiary: #003739;
-    --color-tertiary-container: #1e4d50;
-    --color-on-tertiary-container: #bcebee;
-
-    --color-error: #ffb4ab;
-    --color-on-error: #690005;
-    --color-error-container: #93000a;
-    --color-on-error-containerk: #ffb4ab;
-
-    --color-outline: #8d9387;
-
-    --color-background: #1a1c18;
-    --color-on-background: #e3e2e6;
-
-    --color-surface: #1a1c18;
-    --color-on-surface: #e2e3dc;
-
-    --color-surface-variant: #44474f;
-    --color-on-surface-variant: #c4c6d0;
-
-    --color-inverse-surface: #e3e2e6;
-    --color-inverse-on-surface: #303033;
-
-    --color_off_white: #ECFDFF;
+  /** Dark Theme eventually will be here.*/
 }
 
 
@@ -105,6 +118,7 @@
 
     /* main colors */
     --color-primary: hsla(120, 100%, 37%, 1);
+
 
 
     /**
@@ -166,22 +180,13 @@
 
     /** Default Colors (no theme */
     /** Primary  */
-    --color_primary: #016e00;
-    --color-on-primary: #ffffff;
-    --color-primary-container: #77ff61;
-    --color-on-primary-container: #002200;
+    --color_primary: var(--color-primary);
+
 
     /** Secondary */
-    --color-secondary: #54634d;
-    --color-on-secondary: #ffffff;
-    --color-secondary-container: #d7e8cd;
-    --color-on-secondary-container: #121f0e;
 
-    /** Tertiary */
-    --color-tertiary: #386568;
-    --color-on-tertiary: #ffffff;
-    --color-tertiary-container: #bcebee;
-    --color-on-tertiary-container: #002022;
+
+
 
 
     --color-error: #ba1a1a;
@@ -238,7 +243,34 @@ https://dev.to/ynab/a-semantic-color-system-the-theory-hk7
     color: var(--color-primary-container);
 }
 
+/** Color Primary Mono */
+.color-primary-mono-box{
+    background-color: var(--color-primary-mono);
+    color: var(--color-on-primary-mono);
+    padding: var(--padding);
+    margin: var(--margin);
+}
 
+.color-on-primary-mono-box{
+    background-color: var(--color-on-primary-mono);
+    color: var(--color-primary-mono);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.color-primary-container-mono-box{
+    background-color: var(--color-primary-container-mono);
+    padding: var(--padding);
+    margin: var(--margin);
+    color: var(--color-on-primary-container-mono);
+}
+
+.color-on-primary-container-mono-box{
+    background-color: var(--color-on-primary-container-mono);
+    color: var(--color-primary-container-mono);
+}
+
+/** Color Secondary */
 .color-secondary-box{
     background-color: var(--color-secondary);
     color: var(--color-on-secondary);
