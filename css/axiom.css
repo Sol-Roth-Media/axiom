@@ -63,8 +63,8 @@
     --font_family_narrow: "Arial Narrow";
 
     --font_size: 18px;
-    --font_size_tiny: 12px;
-    --font_size_small: 14px;
+    --font_size_tiny: 13px;
+    --font_size_small: 15px;
     --font_size_medium: 22px;
     --font_size_large: 28px;
 
@@ -400,24 +400,35 @@ header hgroup p{
 pre {
     font-family: var(--font_monospace);
     padding: var(--padding);
-    margin: var(--margin);
+    border-radius: var(--border_radius);
+    display: inline;
 }
+
 
 /* Code in text */
-p > code,
-li > code,
-dd > code,
-td > code {
-    background: var(--color_primary_mono);
+code {
+    background-color: var(--color-primary-mono);
+    color:var(--color-on-primary-mono);
     word-wrap: break-word;
-    box-decoration-break: clone;
+    font-size: var(--font_size_small);
     padding: var(--padding_medium);
+    padding: var(--padding_medium_large);
+    margin: 24px;
+    display: block;
     border-radius: var(--border_radius);
+    border-width: 4px;
+    border-color: var(--color_surface);
+    border-sytle: solid;
 }
 
-/**
-  Article Elements and styles
- */
+pre code{
+    display: block;
+}
+
+
+    /**
+      Article Elements and styles
+     */
 
 article{
     width: clamp(var(--site_header_min),var(--site_header_size),var(--site_header_max));

@@ -2,8 +2,8 @@
 :root, html[data-theme='light'], .light-theme {
 
     /** Color Utilities **/
-    --color_big_step: 38;
-    --color_small_step: calc(48 - var(--color_big_step));
+    --color_big_step: 27;
+    --color_small_step: 9;
     --almost_white_bright: 98%;
     --almost_black_dark: calc(100 - var(--almost_white_bright));
 
@@ -11,19 +11,17 @@
     --color-primary-hue: 120;
     --color-secondary-hue: calc(var(--color-primary-hue) + var(--color_big_step) + var(--color_big_step));
     --color-tertiary-hue: calc(var(--color-secondary-hue) + var(--color_big_step) + var(--color_big_step));
-    --primary_bright: 22%;
-    --primary_dark: 12%;
-    --primary_container_bright: 18%;
-    --container_brightness: calc(100% - var(--primary_bright));
+    --primary_bright: 26%;
+    --primary_dark: 18%;
+    --primary_container_bright: 36%;
+    --container_brightness: calc(100% - var(--primary_dark));
 
     --color-primary-saturation: 100%;
-    --color-primary-light: 22%;
+    --color-primary-light: 28%;
     --color-primary-dark: 18%;
+    --near-black: 4%;
     --color_primary_alpha: 1;
     --mono_saturation: 0%;
-
-
-
 
     /** Surface Colors */
     --color_surface: hsla(0, 0%, 0%, 1);
@@ -38,6 +36,9 @@
     --color-primary: hsla(var(--color-primary-hue), 100%, var(--primary_bright), 1);
     --color-on-primary: hsla(var(--color-primary-hue), 100%, 98%, 1);
     --color-primary-container: hsla(calc(var(--color-primary-hue) - var(--color_small_step)), 100%, var(--primary_dark), 1);
+
+    --color-primary-container-darker: hsla(calc(var(--color-primary-hue) - var(--color_small_step)), 100%, var(--near-black), 1);
+
     --color-on-primary-container: hsla(calc(var(--color-primary-hue) - var(--color_small_step) - var(--color_small_step)), 100%, var(--container_brightness), 1);
 
     /** Mono **/
@@ -46,14 +47,6 @@
     --color-on-primary-mono: hsla(var(--color-primary-hue), var(--mono_saturation), 98%, 1);
     --color-primary-container-mono: hsla(calc(var(--color-primary-hue) - var(--color_small_step)), var(--mono_saturation), var(--primary_dark), 1);
     --color-on-primary-container-mono: hsla(calc(var(--color-primary-hue) - var(--color_small_step) - var(--color_small_step)), var(--mono_saturation), var(--container_brightness), 1);
-
-
-    /** Primary MONO Set Monochrome by reducing saturation to 0 */
-    --color-primary-mono: hsl(var(--color-primary-hue), 0%, var(--color-primary-light));
-    --color-on-primary-mono: hsl(0, 0%, 100%);
-    --color-primary-container-mono: hsl(112, 0%, 69%);
-    --color-on-primary-container-mono: hsl(120, 0%, 7%);
-
 
 
     /** Secondary */
@@ -87,7 +80,7 @@
     --color-on-negative-container: #410002;
 
     /** Positive **/
-    --color-positive: #1ABA1DFF;
+    --color-positive: #00c005;
     --color-on-positive: #ffffff;
     --color-positive-container: #E6FFD6FF;
     --color-on-positive-container: #004109;

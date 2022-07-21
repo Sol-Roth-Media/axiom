@@ -143,3 +143,7 @@ button:active button:active{
     filter: brightness(75%);
 
 }
+
+button i{
+    font-style: normal;
+}
