@@ -9,9 +9,7 @@
 .navbar, nav:nth-of-type(1){
     width: 100%;
     background-color: #121411;
-
     background-color: var(--color-primary-container-darker);
-
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: black;
@@ -23,7 +21,12 @@
 .navbar-menu{
     display: none;
     background-color: #121411;
+    background-color: var(--color-primary-container-darker);
     padding: var(--padding);
+
+    border-bottom-width: 2px;
+    border-bottom-color: var(--color-on-primary-container-mono);
+    border-bottom-style: solid;
 }
 
 :target.navbar-menu {
@@ -34,7 +37,6 @@
 .navbar-menu ul{
     text-align: center;
 }
-
 
 /** 0 class version nav:nth-of-type(1) div:nth-child(1)
  */
@@ -94,6 +96,7 @@
 nav.offscreen{
     text-align: var(--wrapper_text_align);
     background-color: var(--nav_bar_background_color);
+    background-color: var(--color-primary-container-darker);
     margin: 0px;
     padding: var(--offscreen_navbar_padding);
 
