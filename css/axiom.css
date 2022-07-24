@@ -35,6 +35,7 @@
     --size_small_height: 22px;
 
     /** Universal Variables **/
+    --padding_none: var(--space_none);
     --padding_tiny: var(--space_tiny);
     --padding_small: var(--space_small);
     --padding: var(--space_normal);
@@ -43,8 +44,10 @@
     --padding_large: var(--space_large);
     --padding_xlarge: var(--space_xlarge);
     --padding_xxlarge: var(--space_xxlarge);
+    --padding_extreme: var(--space_extreme);
 
     /** Universal Variables **/
+    --margin_none: var(--space_none), auto, var(--space_none), auto;
     --margin_tiny: var(--space_tiny), auto, var(--space_tiny), auto;
     --margin_small: var(--space_small), auto, var(--space_small), auto;
     --margin: var(--space_normal), auto, var(--space_normal), auto;
@@ -182,6 +185,9 @@
     --border_radius_small: 2px;
     --border_radius_medium: 8px;
     --border_radius_large: 14px;
+    --border_radius_xlarge: 24px;
+    --border_radius_xxlarge: 100px;
+    --border_radius_extreme: 200px;
 
     --header_margin_top: 8px;
     --header_margin_right: auto;

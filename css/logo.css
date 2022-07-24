@@ -1,6 +1,4 @@
-:root {
 
-}
 
 /**
 Monochrome Reference
@@ -13,6 +11,10 @@ https://superuser.com/questions/361297/what-colour-is-the-dark-green-on-old-fash
     --logo_font_size: 16px;
     --logo_font_style: normal;
     --logo_font_variant: normal;
+    text-align: var(--container_text_align);
+    margin: var(--container_margin);
+    padding: var(--container_padding);
+    display: block;
 }
 
 .logo small{
@@ -38,4 +40,14 @@ https://superuser.com/questions/361297/what-colour-is-the-dark-green-on-old-fash
     Font-family: Consolas, monaco, monospace;
     font-size: 20px;
     filter: contrast(1);
+}
+
+span.logo img{
+    display: block;
+    border-radius: var(--logo_border_radius);
+    margin: var(--margin);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
